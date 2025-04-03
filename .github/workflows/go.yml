@@ -20,6 +20,7 @@ jobs:
       run: |
         if [ ! -f go.mod ]; then
           echo "Initializing Go module..."
+         go mod init mymodule  # Puedes reemplazar 'mymodule' con el nombre que prefieras
         else
           echo "Go module already initialized."
         fi
