@@ -8,16 +8,13 @@ jobs:
     steps:
     - name: Check out repository code
       uses: actions/checkout@v3
-    - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-    - name: List files in the repository
-      run: |
-          ls ${{ github.workspace }}
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
         go-version: '1.21.5'
     - name: Build
-      run: go build -o app main.go
+      run: go build -o app main.go  # Compila directamente el archivo main.go
     - name: Test
-      run: go test -v ./...
+      run: go test -v ./...   # Ejecuta todas las pruebas en el repositorio
     - run: echo "🍏 This job's status is ${{ job.status }}."
+
