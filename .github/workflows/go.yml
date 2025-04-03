@@ -25,7 +25,7 @@ jobs:
           echo "Go module already initialized."
         fi
     - name: Build
-      run: go build -o app main.go
+      run: go build -v ./...
     - name: Test
       run: go test -v ./...  
     - run: echo "🍏 This job's status is ${{ job.status }}."
