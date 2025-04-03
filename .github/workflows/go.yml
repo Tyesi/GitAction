@@ -19,5 +19,5 @@ jobs:
     - name: Build
       run: go build -o app main.go
     - name: Test
-      run: go test -o app main.go
+      run: go test -o app main_test.go
     - run: echo "🍏 This job's status is ${{ job.status }}."
