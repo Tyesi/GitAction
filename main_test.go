@@ -38,6 +38,6 @@ func TestAdditionHandler(t *testing.T) {
 
 }
 
-func Testfalla(t *testing.T) {
-	t.Error("Este test falla con toda la intención")
+func Testfail(t *testing.T) {
+	t.FailNow("Este test falla con toda la intención")
 }
